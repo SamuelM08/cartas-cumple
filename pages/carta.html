@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="dark" />
+  <title>Tu carta</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <script src="../assets/js/data.js"></script>
+</head>
+
+<body class="page page--letter">
+  <main class="shell">
+    <section class="card card--wide">
+      <div class="glow glow--letter" aria-hidden="true"></div>
+
+      <div class="letter">
+        <div class="letter__top">
+          <span class="pill">Carta dedicada</span>
+          <div class="topActions">
+            <button id="logout" class="link link--ghost" type="button">Cerrar sesión</button>
+          </div>
+        </div>
+
+        <article id="contenido" class="content"></article>
+
+        <!-- Bloque de fotos (todas completas, con mensaje) -->
+        <section class="photos" aria-label="Fotos">
+          <header class="photos__header">
+            <h3 class="h3">Momentos contigo</h3>
+            <p class="lead lead--small">Cada foto tiene su propio mensaje.</p>
+          </header>
+
+          <div id="fotosLista" class="photos__list">
+            <!-- JS inyecta aquí las fotos según el usuario -->
+          </div>
+        </section>
+
+        <div class="letter__bottom">
+          <a class="link" href="../index.html">Volver</a>
+        </div>
+      </div>
+
+      <img class="sticker sticker--med" src="../assets/img/sticker-med.png" alt="" aria-hidden="true">
+      <img class="sticker sticker--plant" src="../assets/img/sticker-plant.png" alt="" aria-hidden="true">
+      <img class="sticker sticker--su" src="../assets/img/sticker-su.png" alt="" aria-hidden="true">
+    </section>
+  </main>
+
+  <script src="../assets/js/carta.js"></script>
+</body>
+</html>

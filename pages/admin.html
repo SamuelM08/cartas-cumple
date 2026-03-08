@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="dark" />
+  <title>Admin — Cartas</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <script src="../assets/js/data.js"></script>
+</head>
+
+<body class="page page--admin">
+  <main class="shell">
+    <section class="card card--wide">
+      <div class="glow glow--admin" aria-hidden="true"></div>
+
+      <header class="card__header">
+        <div class="brand">
+          <span class="brand__mark" aria-hidden="true"></span>
+          <span class="brand__name">Admin</span>
+        </div>
+
+        <h1 class="h1">Cartas registradas</h1>
+        <p class="lead">Filtra por usuario o revisa qué carta ve cada uno.</p>
+      </header>
+
+      <div class="adminBar">
+        <input id="buscaUsuario" class="input" type="text" placeholder="usuario…" />
+        <input id="buscaClave" class="input" type="text" placeholder="nombreClave|DD/MM/AAAA…" />
+      </div>
+
+      <div class="tableWrap">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Usuario</th>
+              <th>Nombre clave</th>
+              <th>Nombre público</th>
+              <th>Fecha</th>
+              <th>Título</th>
+            </tr>
+          </thead>
+          <tbody id="tablaBody"></tbody>
+        </table>
+      </div>
+
+      <div class="adminFooter">
+        <span id="contador" class="fineprint"></span>
+        <a class="link" href="../index.html">Volver</a>
+      </div>
+    </section>
+  </main>
+
+  <script src="../assets/js/admin.js"></script>
+</body>
+</html>

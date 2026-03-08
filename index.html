@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="dark" />
+  <title>Buzón privado</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <script src="assets/js/data.js"></script>
+</head>
+
+<body class="page page--landing lamp-off">
+  <main class="shell">
+    <button id="lampToggle" class="lamp" type="button" aria-pressed="false" aria-label="Encender lámpara">
+      <span class="lamp__cap" aria-hidden="true"></span>
+      <span class="lamp__stem" aria-hidden="true"></span>
+      <span class="lamp__bulb" aria-hidden="true"></span>
+      <span class="lamp__hint">Toca la lámpara</span>
+    </button>
+
+    <section class="card card--login" aria-label="Inicio de sesión">
+      <div class="glow" aria-hidden="true"></div>
+
+      <header class="card__header">
+        <div class="brand">
+          <span class="brand__mark" aria-hidden="true"></span>
+          <span class="brand__name">Buzón privado</span>
+        </div>
+        <h1 class="h1">Accede a tu carta</h1>
+        <p class="lead">Ingresa con el usuario y la contraseña que te di.</p>
+      </header>
+
+      <form id="loginForm" class="form" novalidate>
+        <div class="field">
+          <label class="label" for="user">Usuario</label>
+          <input id="user" class="input" type="text" autocomplete="username" placeholder="usuario" required />
+        </div>
+
+        <div class="field">
+          <label class="label" for="pass">Contraseña</label>
+          <div class="passRow">
+            <input id="pass" class="input" type="password" autocomplete="current-password" placeholder="••••••••" required />
+            <button id="togglePass" class="iconBtn" type="button" aria-label="Mostrar u ocultar contraseña">Ver</button>
+          </div>
+        </div>
+
+        <button class="btn" type="submit">Entrar</button>
+        <p id="error" class="error" aria-live="polite"></p>
+      </form>
+
+      <footer class="card__footer">
+        <span class="fineprint">Cada acceso abre una carta dedicada.</span>
+      </footer>
+    </section>
+  </main>
+
+  <script src="assets/js/login.js"></script>
+</body>
+</html>
